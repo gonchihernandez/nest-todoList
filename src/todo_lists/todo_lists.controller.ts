@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { CreateTodoListDto } from './dtos/create-todo_list';
 import { UpdateTodoListDto } from './dtos/update-todo_list';
+import { AddTodoItemDto } from './dtos/add-todo_item';
 import { TodoList } from '../interfaces/todo_list.interface';
 import { TodoListsService } from './todo_lists.service';
 
@@ -37,6 +38,14 @@ export class TodoListsController {
     @Body() dto: UpdateTodoListDto,
   ): TodoList {
     return this.todoListsService.update(param.todoListId, dto);
+  }
+
+  @Put('addItems/:todoListId')
+  addTodoItems(
+    @Param() param: { todoListId: number },
+    @Body() dto: AddTodoItemDto,
+  ): TodoList {
+    return this.todoListsService.addTodoItems(param.todoListId, dto);
   }
 
   @Delete('/:todoListId')
