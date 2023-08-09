@@ -36,12 +36,3 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Contact
-
-- Martín Fernández (mfernandez@crunchloop.io)
-
-## About Crunchloop
-
-![crunchloop](https://crunchloop.io/logo-blue.png)
-
-We strongly believe in giving back :rocket:. Let's work together [`Get in touch`](https://crunchloop.io/contact).
